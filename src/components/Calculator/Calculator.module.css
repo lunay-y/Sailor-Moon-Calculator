@@ -1,0 +1,10 @@
+/* .calculator {
+   width: 30vw;
+} */
+
+.numbersContainer {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1em;
+   width: 30vw;
+}
