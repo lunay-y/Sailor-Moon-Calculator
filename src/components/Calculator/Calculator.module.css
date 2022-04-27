@@ -1,0 +1,17 @@
+.calculator {
+   display: grid;
+   grid-template-columns: 1;
+}
+
+.numbersContainer {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1em;
+   width: 30vw;
+}
+
+.operators {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1em;
+}
