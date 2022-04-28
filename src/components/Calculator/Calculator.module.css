@@ -1,17 +1,21 @@
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+/* general structure of calculator */
 .calculator {
    display: grid;
-   grid-template-columns: 1;
+   margin-top: 2rem;
+   grid-template-columns: repeat(4, 5rem);
+   grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);
+   background-color: bisque;
 }
-
-.numbersContainer {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 1em;
-   width: 30vw;
+/* output screen for calculation */
+.output {
+   grid-column: 1 / -1;
 }
-
-.operators {
-   display: grid;
-   grid-template-columns: 1fr;
-   gap: 1em;
+/* AC and total buttons */
+.spanGridTwo {
+   grid-column: span 3;
 }
