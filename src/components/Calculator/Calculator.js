@@ -2,29 +2,28 @@ import React from "react";
 import Button from "../Button/Button.js";
 import css from "./Calculator.module.css";
 
-function Calculator({ calculation, total, calculateTotal }) {
-   const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
-   const operators = ["/", "*", "-", "+"];
+function Calculator({ total, calculateTotal }) {
    return (
       <div className={css.Calculator}>
-         <h1>{total}</h1>
+         <h5>hey</h5>
+         <h2>{total}</h2>
          <div className={css.numbersContainer}>
-            {numbers.map(function (number) {
-               return (
-                  <Button
-                     key={number}
-                     text={number}
-                     onClick={() => calculation(number)}
-                  />
-               );
-            })}
+            <Button text="7" />
+            <Button text="8" />
+            <Button text="9" />
+            <Button text="4" />
+            <Button text="5" />
+            <Button text="6" />
+            <Button text="1" />
+            <Button text="2" />
+            <Button text="3" />
+            <Button text="0" />
             <Button text="." />
             <Button text="=" onClick={calculateTotal} />
-            <div className={css.operators}>
-               {operators.map(function (operator) {
-                  return <Button key={operator} text={operator} />;
-               })}
-            </div>
+            <Button text="÷" />
+            <Button text="*" />
+            <Button text="-" />
+            <Button text="+" />
          </div>
       </div>
    );
